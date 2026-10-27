@@ -1,0 +1,995 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>골든베일 | 피트모스·농자재 마케팅 대행사</title>
+<meta name="description" content="피트모스·상토·비료 등 농자재 회사를 위한 마케팅 대행사 골든베일. 기획부터 촬영, 채널 운영, 직접영업까지.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="골든베일">
+<meta property="og:title" content="골든베일 | 피트모스·농자재 마케팅 대행사">
+<meta property="og:description" content="농업인에게 닿는 콘텐츠, 판매로 증명했습니다. 기획부터 촬영, 채널 운영, 직접영업까지.">
+<meta property="og:image" content="assets/og.jpg">
+<meta name="theme-color" content="#3A4A2C">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css">
+
+<style>
+
+/* Layout: 크림 바탕의 회사 사이트. 상단 알약형 메뉴, 메뉴별 화면 전환(해시), 1200px 본문 폭, 진녹색 강조 띠와 브라운 하단 */
+:root{
+  color-scheme: light;
+  --cream:#F3EFE4; --paper:#FAF8F2; --sand:#E8E2D2; --line:#D9D1BD;
+  --green:#3A4A2C; --green-deep:#2B3820; --gold:#E2C158; --orange:#B85A22; --brown:#5A3A1C;
+  --ink:#1E2A1A; --muted:#4F5947; --on-dark:#F3EFE4; --on-dark-muted:#CBD1BF;
+  --font: "Pretendard Variable","Pretendard",-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Malgun Gothic","맑은 고딕",system-ui,sans-serif;
+  --wrap:1200px; --radius:14px;
+  --fs-body:18px; --fs-small:15px;
+  --fs-h1:clamp(36px,5.4vw,68px); --fs-h2:clamp(28px,3.4vw,44px); --fs-h3:clamp(20px,1.8vw,24px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--ink);font-family:var(--font);font-size:var(--fs-body);line-height:1.7;word-break:keep-all;overflow-wrap:break-word;-webkit-font-smoothing:antialiased}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:60;background:var(--cream)}
+img,video{max-width:100%;display:block}
+a{color:inherit}
+h1,h2,h3,h4{margin:0;line-height:1.25;letter-spacing:-0.02em;text-wrap:balance}
+p{margin:0}
+p,li,dd,dt,summary,figcaption,.cap,.pr-k{text-wrap:pretty}
+.pr-p p,.pr-s p,.cap,.c2-result,.vcard h4,.vcard .t,.scard .t,.lead,.sub,.step p,.step h3,.step h4,td,th,dd{text-wrap:balance}
+.nb{white-space:nowrap}
+.page p,.page dd,.page li{text-wrap:balance}
+.wrap{max-width:var(--wrap);margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+.eyebrow{display:inline-flex;align-items:center;gap:10px;font-size:14px;font-weight:700;letter-spacing:.06em;color:var(--green)}
+.eyebrow::before{content:"";width:24px;height:2px;background:currentColor}
+.on-dark .eyebrow,.hero .eyebrow{color:var(--gold)}
+.hero .eyebrow{font-size:16px;text-shadow:0 1px 10px rgba(0,0,0,.45)}
+.lead{font-size:clamp(18px,1.6vw,20px);color:var(--muted);max-width:40em}
+.hl{color:var(--orange)}
+.gold{color:var(--gold)}
+:focus-visible{outline:3px solid var(--orange);outline-offset:3px;border-radius:6px}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:52px;padding:0 26px;border-radius:999px;font:inherit;font-size:17px;font-weight:700;text-decoration:none;border:2px solid transparent;cursor:pointer;transition:background .2s,color .2s,border-color .2s,transform .2s}
+.btn:hover{transform:translateY(-1px)}
+.btn-gold{background:var(--gold);color:var(--green-deep)}
+.btn-gold:hover{background:#EBCD6C}
+.btn-green{background:var(--green);color:var(--on-dark)}
+.btn-green:hover{background:var(--green-deep)}
+.btn-ghost{border-color:currentColor;color:var(--on-dark);background:transparent}
+.btn-ghost:hover{background:rgba(243,239,228,.12)}
+.btn-line{border-color:var(--green);color:var(--green);background:transparent}
+.btn-line:hover{background:var(--green);color:var(--on-dark)}
+.more{display:inline-flex;align-items:center;gap:10px;font-weight:700;color:var(--green);text-decoration:none;font-size:17px}
+.more .arr{display:inline-grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--green);color:var(--on-dark);transition:transform .2s}
+.more:hover .arr{transform:translateX(4px)}
+
+/* header */
+.site-header{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;background:rgba(243,239,228,.94);backdrop-filter:saturate(1.2) blur(8px);border-bottom:1px solid transparent;transition:border-color .2s}
+.site-header.scrolled{border-bottom-color:var(--line)}
+.hdr{display:flex;align-items:center;justify-content:space-between;gap:16px;min-height:78px}
+.brand{display:flex;align-items:center;text-decoration:none}
+.brand img{height:46px;width:auto}
+.nav{display:flex;gap:4px;padding:6px;background:var(--paper);border:1px solid var(--line);border-radius:999px}
+.nav a{padding:10px 20px;border-radius:999px;text-decoration:none;font-weight:600;font-size:16px;color:var(--ink);white-space:nowrap}
+.nav a:hover{background:var(--sand)}
+.nav a[aria-current="page"]{background:var(--green);color:var(--on-dark)}
+.hdr-cta{min-height:46px;padding:0 22px;font-size:16px}
+.menu-btn{display:none;width:48px;height:48px;border-radius:12px;border:1px solid var(--line);background:var(--paper);cursor:pointer;place-items:center}
+.menu-btn span{display:block;width:20px;height:2px;background:var(--ink);position:relative}
+.menu-btn span::before,.menu-btn span::after{content:"";position:absolute;left:0;width:20px;height:2px;background:var(--ink)}
+.menu-btn span::before{top:-6px}.menu-btn span::after{top:6px}
+.mnav{display:none}
+
+/* pages */
+.page{display:none}
+.page.active{display:block;animation:pagein .35s ease}
+@keyframes pagein{from{opacity:.4;transform:translateY(6px)}to{opacity:1;transform:none}}
+.section{padding-block:clamp(64px,8vw,112px)}
+.section.tight{padding-block:clamp(48px,6vw,80px)}
+.sec-head{display:grid;gap:16px;margin-bottom:clamp(32px,4vw,52px)}
+.sec-head.split{grid-template-columns:1fr auto;align-items:end;gap:24px}
+.sec-head h2{font-size:var(--fs-h2);font-weight:800}
+.page-head{padding-block:clamp(56px,7vw,96px) clamp(40px,5vw,64px);border-bottom:1px solid var(--line)}
+.page-head h1{font-size:clamp(34px,4.6vw,56px);font-weight:800;margin-top:14px}
+.page-head .lead{margin-top:16px}
+
+/* hero */
+.hero{position:relative;min-height:min(84vh,820px);display:flex;align-items:flex-end;color:var(--on-dark);background:var(--green-deep);overflow:hidden}
+.hero video,.hero .poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(30,42,26,.30) 0%,rgba(30,42,26,.45) 45%,rgba(25,34,20,.88) 100%)}
+.hero .wrap{position:relative;z-index:1;width:100%;padding-block:clamp(48px,7vw,88px)}
+.hero-grid{display:grid;grid-template-columns:1.25fr .9fr;gap:clamp(24px,4vw,64px);align-items:end}
+.hero h1{font-size:var(--fs-h1);font-weight:800;margin-top:18px;text-shadow:0 2px 24px rgba(0,0,0,.25)}
+.hero p{font-size:clamp(17px,1.5vw,19px);color:#EDEAE0;max-width:30em}
+.hero .btns{display:flex;flex-wrap:wrap;gap:12px;margin-top:24px}
+.pause{position:absolute;z-index:2;right:max(20px,env(safe-area-inset-right,0px));top:20px;width:44px;height:44px;border-radius:50%;border:1px solid rgba(243,239,228,.5);background:rgba(30,42,26,.45);color:var(--on-dark);cursor:pointer;font:inherit;font-size:14px}
+
+/* home: about summary */
+.split2{display:grid;grid-template-columns:1fr 1fr;gap:clamp(32px,5vw,72px);align-items:center}
+.photo{border-radius:var(--radius);overflow:hidden;background:var(--sand)}
+.photo img{width:100%;height:100%;object-fit:cover;aspect-ratio:4/3}
+.statement{font-size:var(--fs-h2);font-weight:800;margin-top:14px}
+.plist{list-style:none;padding:0;margin:28px 0 32px;display:grid;border-top:1px solid var(--line)}
+.plist li{display:grid;grid-template-columns:44px 1fr;gap:12px;padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.plist .n{font-weight:800;color:var(--orange);font-size:16px;font-variant-numeric:tabular-nums}
+.plist b{font-size:19px}
+.plist span.d{display:block;color:var(--muted);font-size:16px;margin-top:2px}
+
+/* steps row */
+.steps{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.step{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:24px 20px 26px;display:grid;gap:10px;align-content:start}
+.step .num{font-size:15px;font-weight:800;color:var(--green);font-variant-numeric:tabular-nums}
+.step h3{font-size:22px;font-weight:800}
+.step p{font-size:16px;color:var(--muted);line-height:1.6}
+.step.key{background:var(--green);border-color:var(--green);color:var(--on-dark)}
+.step.key .num{color:var(--gold)}
+.step.key p{color:var(--on-dark-muted)}
+
+/* cards (portfolio) */
+.pf-grid{display:grid;grid-template-columns:1.4fr 1fr;grid-template-rows:auto auto;gap:16px}
+.pf-grid .card:first-child{grid-row:span 2}
+.card{position:relative;display:block;border-radius:var(--radius);overflow:hidden;background:var(--green-deep);color:var(--on-dark);text-decoration:none;min-height:240px}
+.card img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.card:hover img{transform:scale(1.04)}
+.card::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,34,20,0) 30%,rgba(25,34,20,.9) 100%)}
+.card .ci{position:absolute;z-index:1;left:0;right:0;bottom:0;padding:22px;display:grid;gap:8px}
+.tag{display:inline-block;justify-self:start;font-size:13px;font-weight:700;padding:5px 11px;border-radius:999px;background:var(--gold);color:var(--green-deep)}
+.tag.brown{background:var(--brown);color:var(--on-dark)}
+.card h3{font-size:clamp(19px,1.7vw,24px);font-weight:800;line-height:1.35}
+.card .yt{font-size:14px;font-weight:600;color:#E3E0D4}
+.play{position:absolute;z-index:1;top:18px;right:18px;width:48px;height:48px;border-radius:50%;background:rgba(243,239,228,.92);display:grid;place-items:center}
+.play::before{content:"";margin-left:4px;border-left:15px solid var(--green);border-top:9px solid transparent;border-bottom:9px solid transparent}
+
+/* channels */
+.ch-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.ch{display:grid;grid-template-columns:auto 1fr auto;gap:18px;align-items:center;padding:26px;border-radius:var(--radius);background:var(--paper);border:1px solid var(--line);text-decoration:none;transition:border-color .2s,background .2s}
+.ch:hover{border-color:var(--green);background:#fff}
+.ch .ico{width:56px;height:56px;border-radius:14px;background:#C4302B;display:grid;place-items:center}
+.ch .ico::before{content:"";margin-left:4px;border-left:16px solid #fff;border-top:10px solid transparent;border-bottom:10px solid transparent}
+.ch b{display:block;font-size:20px}
+.ch span{display:block;color:var(--muted);font-size:16px}
+.ch .go{font-weight:700;color:var(--green);white-space:nowrap;font-size:16px}
+
+/* CTA band */
+.band{background:var(--green);color:var(--on-dark)}
+.band .wrap{display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center;padding-block:clamp(48px,6vw,72px)}
+.band h2{font-size:clamp(26px,3vw,38px);font-weight:800}
+.band p{color:var(--on-dark-muted);margin-top:8px}
+.band .tel{font-size:clamp(22px,2.4vw,30px);font-weight:800;color:var(--gold);user-select:all;font-variant-numeric:tabular-nums}
+.band .act{display:grid;gap:12px;justify-items:end}
+
+/* about page */
+.greet{display:grid;grid-template-columns:1fr 1.1fr;gap:clamp(32px,5vw,72px);align-items:start}
+.greet .body{display:grid;gap:18px;max-width:36em}
+.greet .sign{margin-top:8px;font-weight:700}
+.principles{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.pr{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--green);border-radius:var(--radius);padding:24px 22px;display:grid;gap:10px;align-content:start}
+.pr .num{font-weight:800;color:var(--green);font-size:28px;font-variant-numeric:tabular-nums}
+.pr h3{font-size:21px;font-weight:800}
+.pr p{color:var(--muted);font-size:16px;line-height:1.6}
+.pr .ex{margin-top:6px;font-size:14px;background:var(--sand);padding:10px 12px;border-radius:8px;color:var(--ink)}
+.info{width:100%;border-collapse:collapse;background:var(--paper);border-radius:var(--radius);overflow:hidden;border:1px solid var(--line)}
+.info th,.info td{text-align:left;padding:18px 22px;border-bottom:1px solid var(--line);vertical-align:top;font-size:17px}
+.info tr:last-child th,.info tr:last-child td{border-bottom:0}
+.info th{width:180px;background:var(--sand);font-weight:700;color:var(--green)}
+.map-box{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;padding:28px;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius)}
+.map-box .addr{font-size:19px;font-weight:700}
+.map-box .sub{color:var(--muted);font-size:16px;margin-top:4px}
+.map-actions{display:flex;flex-wrap:wrap;gap:10px}
+
+/* services page */
+.svc{border-top:2px solid var(--ink)}
+.svc details{border-bottom:1px solid var(--line)}
+.svc summary{list-style:none;display:grid;grid-template-columns:72px 200px 1fr 48px;gap:16px;align-items:center;padding:26px 8px;cursor:pointer;transition:background .2s}
+.svc summary::-webkit-details-marker{display:none}
+.svc summary:hover{background:var(--paper)}
+.svc .num{font-weight:800;font-size:20px;color:var(--green);font-variant-numeric:tabular-nums}
+.svc .t{font-size:clamp(22px,2.2vw,28px);font-weight:800}
+.svc .s{color:var(--muted)}
+.svc .tog{width:44px;height:44px;border-radius:50%;border:1.5px solid var(--green);display:grid;place-items:center;color:var(--green);font-weight:700;transition:transform .25s,background .2s}
+.svc details[open] .tog{transform:rotate(45deg);background:var(--green);color:var(--on-dark)}
+.svc .detail{padding:0 8px 28px calc(72px + 16px + 8px);color:var(--ink);max-width:56em}
+.svc details.key summary{background:var(--green);color:var(--on-dark)}
+.svc details.key .num{color:var(--gold)}
+.svc details.key .s{color:var(--on-dark-muted)}
+.svc details.key .tog{border-color:var(--gold);color:var(--gold)}
+.svc details.key[open] .tog{background:var(--gold);color:var(--green-deep)}
+.svc details.key .detail{background:var(--green);color:var(--on-dark);padding-top:0;max-width:none}
+.svc details.key .detail::after{content:"";display:block}
+.types{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:12px}
+.type{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:22px 20px;display:grid;gap:10px;align-content:start}
+.type .role{font-size:13px;font-weight:700;color:var(--orange);letter-spacing:.04em}
+.type h3{font-size:20px;font-weight:800}
+.type p{font-size:16px;color:var(--muted);line-height:1.6}
+.cycle{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;counter-reset:c}
+.cyc{background:var(--paper);border:1px solid var(--line);border-top:4px solid var(--green);border-radius:var(--radius);padding:22px 20px;display:grid;gap:8px;align-content:start;position:relative}
+.cyc .num{font-size:15px;font-weight:800;color:var(--green);font-variant-numeric:tabular-nums}
+.cyc h3{font-size:20px;font-weight:800}
+.cyc p{font-size:16px;color:var(--muted);line-height:1.55}
+.cyc .ex{font-size:14px;color:var(--ink);border-top:1px dashed var(--line);padding-top:10px;margin-top:4px}
+.cyc.key{background:var(--green);border-color:var(--green);border-top-color:var(--gold);color:var(--on-dark)}
+.cyc.key .num{color:var(--gold)}.cyc.key p{color:var(--on-dark-muted)}.cyc.key .ex{color:var(--on-dark);border-top-color:rgba(243,239,228,.3)}
+.loop{margin-top:14px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:center;background:var(--brown);color:var(--on-dark);border-left:5px solid var(--gold);border-radius:10px;padding:18px 22px}
+.loop b{color:var(--gold);white-space:nowrap}
+.scope{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:0;border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.scope div{padding:22px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--paper)}
+.scope b{display:block;font-size:19px}
+.scope span{color:var(--muted);font-size:16px}
+
+/* portfolio page */
+.case{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,4vw,56px);align-items:start;padding-block:clamp(40px,5vw,64px);border-top:1px solid var(--line)}
+.case:first-of-type{border-top:0}
+.case .imgs{display:grid;gap:12px}
+.case .imgs.two{grid-template-columns:1fr 1fr}
+.case .imgs img{width:100%;border-radius:var(--radius);aspect-ratio:4/3;object-fit:cover}
+.case .imgs.two img:first-child{grid-column:span 2;aspect-ratio:16/9}
+.case h3{font-size:clamp(24px,2.4vw,32px);font-weight:800;margin-top:12px}
+.case .for{color:var(--muted);margin-top:6px}
+.case dl{display:grid;grid-template-columns:96px 1fr;gap:14px 18px;margin:24px 0 0}
+.case dt{font-weight:800;color:var(--green)}
+.case dd{margin:0}
+.case .result{margin-top:22px;padding:16px 18px;background:var(--green);color:var(--on-dark);border-radius:10px;font-weight:600}
+.case .result b{color:var(--gold);margin-right:8px}
+.filters{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:24px}
+.filters button{font:inherit;font-size:16px;font-weight:600;min-height:44px;padding:0 18px;border-radius:999px;border:1px solid var(--line);background:var(--paper);color:var(--ink);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--green);border-color:var(--green);color:var(--on-dark)}
+.vids{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.vids .card{min-height:0;aspect-ratio:16/10}
+.vids .card[hidden]{display:none}
+
+
+/* video cards: thumbnail on top, caption below */
+.vgrid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px}
+.vcard{display:grid;grid-template-rows:auto 1fr;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
+.vcard:hover{border-color:var(--green);transform:translateY(-2px)}
+.vcard .th{position:relative;aspect-ratio:16/9;background:var(--green-deep);overflow:hidden}
+.vcard .th img{width:100%;height:100%;object-fit:cover;transition:transform .5s}
+.vcard:hover .th img{transform:scale(1.03)}
+.vcard .play{top:10px;right:10px;width:38px;height:38px;opacity:.9}
+.vcard .play::before{border-left-width:12px;border-top-width:7px;border-bottom-width:7px}
+.vcard .vb{padding:18px 20px 20px;display:grid;gap:8px;align-content:start}
+.vcard h3{font-size:19px;font-weight:800;line-height:1.4}
+.vcard .yt{font-size:14px;font-weight:600;color:var(--muted)}
+.vcard[hidden]{display:none}
+@media (max-width:1080px){.vgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media (max-width:560px){.vgrid{grid-template-columns:1fr}}
+
+
+.wally{margin-top:40px;padding:clamp(22px,3vw,32px);background:var(--cream);border:1px solid var(--line);border-radius:var(--radius)}
+.wally[hidden]{display:none}
+.wally-head h3{font-size:clamp(21px,2vw,26px);font-weight:800;margin-top:10px}
+.wally-head p{color:var(--muted);margin-top:6px;max-width:44em}
+.sgrid{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;margin-top:22px}
+.scard{display:grid;grid-template-rows:auto 1fr;background:var(--paper);border:1px solid var(--line);border-radius:12px;overflow:hidden;text-decoration:none;color:var(--ink);transition:border-color .2s,transform .2s}
+.scard:hover{border-color:var(--brown);transform:translateY(-2px)}
+.scard .th{position:relative;aspect-ratio:9/16;background:var(--green-deep);overflow:hidden}
+.scard .th img{width:100%;height:100%;object-fit:cover}
+.scard .play{top:10px;right:10px;width:34px;height:34px;opacity:.9}
+.scard .play::before{border-left-width:11px;border-top-width:7px;border-bottom-width:7px}
+.scard .sb{padding:12px 14px 14px;display:grid;gap:6px;align-content:start}
+.scard h3{font-size:16px;font-weight:700;line-height:1.45}
+.scard .yt{font-size:13px;font-weight:600;color:var(--muted)}
+.scard[hidden]{display:none}
+@media (max-width:1080px){.sgrid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:560px){.sgrid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+
+
+/* case studies: product / customer / problem -> solution */
+.case2{padding-block:clamp(36px,5vw,56px);border-top:1px solid var(--line)}
+.case2:first-of-type{border-top:0;padding-top:0}
+.c2-head h3{font-size:clamp(24px,2.6vw,34px);font-weight:800;margin-top:12px}
+.c2-meta{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0 0}
+.c2-meta div{background:var(--paper);border:1px solid var(--line);border-radius:12px;padding:16px 18px}
+.c2-meta dt{font-size:14px;font-weight:700;color:var(--orange)}
+.c2-meta dd{margin:4px 0 0;font-weight:700;font-size:17px}
+.pr-list{display:grid;gap:12px;margin-top:22px}
+.pr-row{display:grid;grid-template-columns:1fr 36px 1.15fr 300px;gap:16px;align-items:center;background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:16px 16px 16px 22px}
+.pr-k{display:block;font-size:13px;font-weight:700;letter-spacing:.04em;margin-bottom:4px}
+.pr-p .pr-k{color:var(--muted)}
+.pr-p p{font-weight:600}
+.pr-s .pr-k{color:var(--green)}
+.pr-s p{font-weight:700;color:var(--green-deep)}
+.pr-ar{display:grid;place-items:center;width:36px;height:36px;border-radius:50%;background:var(--green);color:var(--on-dark);font-weight:700}
+.pr-v{display:grid;gap:8px;text-decoration:none;color:var(--ink)}
+.pr-v .th{position:relative;display:block;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:var(--green-deep)}
+.pr-v .th img{width:100%;height:100%;object-fit:cover;transition:transform .4s}
+.pr-v:hover .th img{transform:scale(1.04)}
+.pr-v .play{top:8px;right:8px;width:32px;height:32px;opacity:.9}
+.pr-v .play::before{border-left-width:10px;border-top-width:6px;border-bottom-width:6px}
+.pr-v .cap{font-size:14px;font-weight:600;color:var(--muted);line-height:1.4}
+.c2-result{margin-top:14px;padding:16px 20px;background:var(--green);color:var(--on-dark);border-radius:12px;font-weight:600}
+.c2-result b{color:var(--gold);margin-right:10px}
+@media (max-width:1080px){.pr-row{grid-template-columns:1fr 36px 1fr;}.pr-v{grid-column:1/-1;grid-template-columns:200px 1fr;align-items:center}}
+@media (max-width:700px){.c2-meta{grid-template-columns:1fr}.pr-row{grid-template-columns:1fr;padding:18px}.pr-ar{transform:rotate(90deg)}.pr-v{grid-template-columns:1fr}}
+
+/* contact */
+.contact{display:grid;grid-template-columns:1fr 1.15fr;gap:clamp(32px,5vw,64px);align-items:start}
+.flow{list-style:none;margin:24px 0 0;padding:0;display:grid;gap:12px}
+.flow li{display:grid;grid-template-columns:48px 1fr;gap:16px;align-items:start;padding:18px;background:var(--paper);border:1px solid var(--line);border-radius:12px}
+.flow .n{width:48px;height:48px;border-radius:50%;background:var(--green);color:var(--gold);display:grid;place-items:center;font-weight:800;font-size:18px}
+.flow b{font-size:19px;display:block}
+.flow span{color:var(--muted);font-size:16px}
+.cinfo{margin-top:28px;display:grid;gap:10px}
+.crow{display:grid;grid-template-columns:72px 1fr auto;gap:12px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.crow .k{font-weight:700;color:var(--green)}
+.crow .v{font-size:19px;font-weight:700;user-select:all;min-width:0}
+.copy{font:inherit;font-size:14px;font-weight:600;min-height:40px;padding:0 14px;border-radius:999px;border:1px solid var(--green);background:transparent;color:var(--green);cursor:pointer}
+.copy:hover{background:var(--green);color:var(--on-dark)}
+form.inq{background:var(--paper);border:1px solid var(--line);border-radius:var(--radius);padding:clamp(22px,3vw,36px);display:grid;gap:18px}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fld{display:grid;gap:8px;min-width:0}
+.fld label{font-weight:700;font-size:16px}
+.fld label .req{color:var(--orange);margin-left:2px}
+.fld input,.fld select,.fld textarea{font:inherit;font-size:17px;width:100%;min-height:52px;padding:12px 14px;border-radius:10px;border:1.5px solid var(--line);background:#fff;color:var(--ink)}
+.fld textarea{min-height:150px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{outline:none;border-color:var(--green);box-shadow:0 0 0 3px rgba(58,74,44,.15)}
+.agree{display:flex;gap:10px;align-items:flex-start;font-size:16px}
+.agree input{width:22px;height:22px;margin-top:3px;accent-color:var(--green);flex:none}
+.notice{padding:14px 16px;border-radius:10px;background:var(--sand);font-size:16px}
+.notice.err{background:#F6E1D3;color:#7A3410}
+
+/* privacy */
+.doc{max-width:820px}
+.doc h2{font-size:22px;font-weight:800;margin:36px 0 12px}
+.doc p,.doc li{color:var(--ink)}
+.doc ul{padding-left:1.2em;margin:8px 0}
+.draft{display:inline-block;margin-top:14px;padding:8px 14px;border-radius:8px;background:#F6E1D3;color:#7A3410;font-weight:700;font-size:15px}
+
+/* footer */
+.site-footer{background:var(--brown);color:var(--on-dark);padding-block:56px 40px}
+.ft{display:grid;grid-template-columns:auto 1fr auto;gap:40px;align-items:start}
+.ft img{height:64px;width:auto}
+.ft .big{font-size:clamp(22px,2.4vw,30px);font-weight:800;line-height:1.35}
+.ft nav{display:grid;gap:8px}
+.ft nav a{text-decoration:none;color:var(--on-dark-muted);font-weight:600}
+.ft nav a:hover{color:var(--gold)}
+.biz{margin-top:36px;padding-top:24px;border-top:1px solid rgba(243,239,228,.2);display:flex;flex-wrap:wrap;gap:6px 20px;font-size:15px;color:var(--on-dark-muted)}
+.biz b{color:var(--on-dark);font-weight:600}
+.copyr{margin-top:12px;font-size:14px;color:#B9B29E}
+
+/* mobile call bar */
+.callbar{display:none}
+
+@media (max-width:1080px){
+  .nav,.hdr-cta{display:none}
+  .menu-btn{display:grid}
+  .mnav{display:none;padding:8px max(20px,env(safe-area-inset-right,0px)) 18px max(20px,env(safe-area-inset-left,0px));border-top:1px solid var(--line);background:var(--cream)}
+  .mnav.open{display:grid;gap:4px}
+  .mnav a{padding:14px 12px;border-radius:10px;text-decoration:none;font-weight:700;font-size:18px}
+  .mnav a[aria-current="page"]{background:var(--green);color:var(--on-dark)}
+  .steps{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .steps .step.key{grid-column:span 2}
+  .principles{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .types{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .cycle{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .svc summary{grid-template-columns:56px 1fr 44px}
+  .svc .s{grid-column:2/3;grid-row:2;font-size:16px}
+  .svc .tog{grid-column:3;grid-row:1/3}
+  .svc .detail{padding-left:72px}
+}
+@media (max-width:820px){
+  .hero-grid,.split2,.greet,.case,.contact{grid-template-columns:1fr}
+  .pf-grid{grid-template-columns:1fr}
+  .pf-grid .card:first-child{grid-row:auto}
+  .pf-grid .card{aspect-ratio:16/10;min-height:0}
+  .ch-grid{grid-template-columns:1fr}
+  .band .wrap{grid-template-columns:1fr}
+  .band .act{justify-items:start}
+  .vids{grid-template-columns:repeat(2,minmax(0,1fr))}
+  .scope{grid-template-columns:1fr 1fr}
+  .map-box{grid-template-columns:1fr}
+  .ft{grid-template-columns:1fr}
+  .sec-head.split{grid-template-columns:1fr}
+  .info th{width:110px}
+  .callbar{display:grid;grid-template-columns:1fr 1fr;gap:8px;position:fixed;left:0;right:0;bottom:0;z-index:55;padding:10px max(12px,env(safe-area-inset-right,0px)) calc(10px + env(safe-area-inset-bottom,0px)) max(12px,env(safe-area-inset-left,0px));background:var(--paper);border-top:1px solid var(--line)}
+  .callbar a{min-height:50px;font-size:16px}
+  body{padding-bottom:76px}
+}
+@media (max-width:560px){
+  :root{--fs-body:17px}
+  .brand img{height:38px}
+  .steps,.principles,.types,.cycle,.vids,.scope{grid-template-columns:1fr}
+  .steps .step.key{grid-column:auto}
+  .row2{grid-template-columns:1fr}
+  .loop{grid-template-columns:1fr}
+  .info th,.info td{display:block;width:auto}
+  .info th{padding-bottom:6px}.info td{padding-top:0;border-bottom:1px solid var(--line)}
+  .info tr th{border-bottom:0}
+  .crow{grid-template-columns:56px 1fr}
+  .crow .copy{grid-column:2;justify-self:start}
+  .case .imgs.two{grid-template-columns:1fr}
+  .case .imgs.two img:first-child{grid-column:auto}
+  .case dl{grid-template-columns:1fr;gap:4px}
+  .case dd{margin-bottom:12px}
+  .ch{grid-template-columns:auto 1fr}
+  .ch .go{grid-column:2}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important;scroll-behavior:auto!important}
+}
+</style>
+</head>
+<body>
+
+<header class="site-header" id="top">
+  <div class="wrap hdr">
+    <a class="brand" href="#home" aria-label="골든베일 홈"><img src="assets/logo.png" alt="골든베일 GOLDENVEIL" width="556" height="243"></a>
+    <nav class="nav" aria-label="주 메뉴">
+      <a href="#about">회사소개</a>
+      <a href="#services">사업영역</a>
+      <a href="#portfolio">포트폴리오</a>
+      <a href="#contact">문의</a>
+    </nav>
+    <a class="btn btn-gold hdr-cta" href="#contact">상담 문의</a>
+    <button class="menu-btn" id="menuBtn" aria-label="메뉴 열기" aria-expanded="false" aria-controls="mnav"><span></span></button>
+  </div>
+  <nav class="mnav" id="mnav" aria-label="모바일 메뉴">
+    <a href="#home">홈</a>
+    <a href="#about">회사소개</a>
+    <a href="#services">사업영역</a>
+    <a href="#portfolio">포트폴리오</a>
+    <a href="#contact">문의</a>
+  </nav>
+</header>
+
+<main>
+<!-- ============ HOME ============ -->
+<section class="page" data-page="home" data-title="골든베일 | 피트모스·농자재 마케팅 대행사">
+  <div class="hero">
+    <img class="poster" src="assets/hero-poster.jpg" alt="">
+    <video id="heroVideo" muted loop playsinline autoplay preload="metadata" poster="assets/hero-poster.jpg" aria-hidden="true"></video>
+    <button class="pause" id="pauseBtn" aria-label="배경 영상 일시정지">❚❚</button>
+    <div class="wrap">
+      <div class="hero-grid">
+        <div>
+          <span class="eyebrow">피트모스·농자재 마케팅 대행사</span>
+          <h1>농업인에게 닿는 콘텐츠,<br><span class="gold">판매로 증명했습니다</span></h1>
+        </div>
+        <div>
+          <p>피트모스·상토·비료 등 농자재 회사를 위한 마케팅 대행사입니다. 기획부터 촬영, 채널 운영, 직접영업까지!</p>
+          <div class="btns">
+            <a class="btn btn-gold" href="#contact">마케팅 상담 받기</a>
+            <a class="btn btn-ghost" href="#portfolio">작업 사례 보기</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap split2">
+      <div>
+        <span class="eyebrow">회사소개</span>
+        <h2 class="statement">콘텐츠로 끝나지 않고,<br>주문까지 연결합니다.</h2>
+        <ul class="plist">
+          <li><span class="n">01</span><div><b>고객 문제를 주제로</b><span class="d">농가가 실제로 겪는 문제로 콘텐츠를 시작합니다.</span></div></li>
+          <li><span class="n">02</span><div><b>현장과 실측으로 신뢰</b><span class="d">농장주의 목소리와 직접 측정한 결과로 근거를 보여줍니다.</span></div></li>
+          <li><span class="n">03</span><div><b>고객군을 나눠 운영</b><span class="d">원예와 축산은 고민이 달라 채널을 따로 운영합니다.</span></div></li>
+          <li><span class="n">04</span><div><b>채널마다 역할 분담</b><span class="d">쇼츠로 알리고, 롱폼으로 신뢰를 쌓고, 릴스로 반응을 끌어냅니다.</span></div></li>
+        </ul>
+        <a class="more" href="#about">회사소개 자세히 보기 <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+      <a class="photo" href="https://www.youtube.com/watch?v=1X7mCPsxYtE" target="_blank" rel="noopener" style="display:block;position:relative"><img src="assets/yt_1X7mCPsxYtE.jpg" alt="블루베리 재배, 아직도 해면하고 계신가요? 영상 썸네일" loading="lazy" style="aspect-ratio:16/9"><span class="play" aria-hidden="true" style="top:12px;right:12px"></span></a>
+    </div>
+  </div>
+
+  <div class="section" style="background:var(--paper);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head split">
+        <div>
+          <span class="eyebrow">사업영역</span>
+          <h2 style="margin-top:14px">기획부터 직접영업까지</h2>
+        </div>
+        <a class="more" href="#services">사업영역 자세히 보기 <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+      <div class="steps">
+        <div class="step"><span class="num">01</span><h3>기획</h3><p>고객이 겪는 문제에서 콘텐츠 주제를 정합니다</p></div>
+        <div class="step"><span class="num">02</span><h3>촬영</h3><p>농가 인터뷰와 실측 장면을 직접 촬영합니다</p></div>
+        <div class="step"><span class="num">03</span><h3>편집</h3><p>롱폼·쇼츠·릴스를 채널에 맞게 제작합니다</p></div>
+        <div class="step"><span class="num">04</span><h3>채널 운영</h3><p>고객군별 채널을 유튜브·인스타그램으로 운영합니다</p></div>
+        <div class="step key"><span class="num">05</span><h3>직접영업</h3><p>들어온 관심을 주문으로 연결합니다</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="sec-head split">
+        <div>
+          <span class="eyebrow">포트폴리오</span>
+          <h2 style="margin-top:14px">직접 기획하고 촬영한 콘텐츠</h2>
+        </div>
+        <a class="more" href="#portfolio">포트폴리오 전체 보기 <span class="arr" aria-hidden="true">→</span></a>
+      </div>
+      <div class="vgrid">
+        <a class="vcard" href="https://www.youtube.com/watch?v=rRuLLw9rix8" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_rRuLLw9rix8.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="vb"><span class="tag">농가 인터뷰</span><h3>블루베리 농장주가 화이트 피트모스를 바꾼 결정적 이유는?</h3><span class="yt">에코피트 · 유튜브에서 보기 ↗</span></span></a>
+        <a class="vcard" href="https://www.youtube.com/watch?v=ia7QPiSa8Zo" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_ia7QPiSa8Zo.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="vb"><span class="tag">실증</span><h3>피트모스 통백 1개 = 130L 화분 몇 개나 채울까?</h3><span class="yt">에코피트 · 유튜브에서 보기 ↗</span></span></a>
+        <a class="vcard" href="https://www.youtube.com/watch?v=UYoO1TcH4rY" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_UYoO1TcH4rY.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="vb"><span class="tag brown">축사·동물원</span><h3>동물원 악취! 계속 청소만 하실 건가요?</h3><span class="yt">동물복지연구소 · 유튜브에서 보기 ↗</span></span></a>
+      </div>
+    </div>
+  </div>
+
+  <div class="section tight" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">운영 중인 채널</span>
+        <h2 style="font-size:clamp(24px,2.6vw,32px)">골든베일이 기획·촬영·편집·운영하는 채널입니다</h2>
+      </div>
+      <div class="ch-grid">
+        <a class="ch" href="https://www.youtube.com/@%EC%97%90%EC%BD%94%ED%94%BC%ED%8A%B8" target="_blank" rel="noopener">
+          <span class="ico" aria-hidden="true"></span>
+          <div><b>에코피트</b><span>고객사 채널 · 블루베리·원예 농가 대상</span></div>
+          <span class="go">채널 보기 ↗</span>
+        </a>
+        <a class="ch" href="https://www.youtube.com/@peatleb" target="_blank" rel="noopener">
+          <span class="ico" aria-hidden="true"></span>
+          <div><b>동물복지연구소</b><span>골든베일 운영 채널 · 에코피트 피트모스를 축사·동물원에 소개</span></div>
+          <span class="go">채널 보기 ↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <div class="band">
+    <div class="wrap">
+      <div>
+        <h2>농자재 마케팅, 상담부터 시작하세요</h2>
+        <p>제품과 지금의 고민을 알려주시면 맞는 콘텐츠 방향을 함께 찾겠습니다.</p>
+      </div>
+      <div class="act">
+        <span class="tel">031-391-8245</span>
+        <a class="btn btn-gold" href="#contact">문의하기</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT ============ -->
+<section class="page" data-page="about" data-title="회사소개 | 골든베일">
+  <div class="page-head"><div class="wrap">
+    <span class="eyebrow">회사소개</span>
+    <h1>농자재를 아는 마케팅 대행사</h1>
+    <p class="lead">골든베일은 피트모스를 중심으로 농자재 회사의 콘텐츠 마케팅과 영업을 함께 맡습니다.</p>
+  </div></div>
+
+  <div class="section">
+    <div class="wrap greet">
+      <div>
+        <h2 class="statement" style="margin-top:0">콘텐츠로 끝나지 않고,<br><span class="hl">주문까지 연결합니다.</span></h2>
+        <div class="photo" style="margin-top:28px"><img src="assets/bighouse.jpg" alt="대형 블루베리 하우스 내부" loading="lazy"></div>
+      </div>
+      <div class="body">
+        <p>안녕하십니까. 골든베일 대표 이태인입니다.</p>
+        <p>농자재는 좋은 제품이라는 이유만으로 팔리지 않습니다. 농가는 제품 설명보다, 자기 농장의 문제를 누가 풀어 주는지를 먼저 봅니다.</p>
+        <p>그래서 골든베일은 농가가 실제로 겪는 문제에서 콘텐츠를 시작합니다. 현장에 직접 찾아가 촬영하고, 고객군에 맞는 채널을 운영하고, 콘텐츠로 생긴 관심이 실제 주문이 될 때까지 영업으로 이어갑니다.</p>
+        <p>콘텐츠를 만드는 데서 멈추지 않고, 판매까지 함께 고민하는 마케팅 파트너가 되겠습니다.</p>
+        <p class="sign">골든베일 주식회사 대표 이태인</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="background:var(--paper);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">일하는 원칙</span>
+        <h2>제품보다 <span class="hl">문제 해결</span>을 먼저 보여줍니다</h2>
+      </div>
+      <div class="principles">
+        <div class="pr"><span class="num">01</span><h3>고객 문제를 주제로</h3><p>해면작업·인건비·악취처럼 농가가 실제로 겪는 문제로 콘텐츠를 시작합니다.</p><span class="ex">예 · 「600평 블루베리 농가가 인건비를 줄인 방법」</span></div>
+        <div class="pr"><span class="num">02</span><h3>현장과 실측으로 신뢰</h3><p>실제 농장주의 목소리와 직접 측정한 결과로 근거를 보여줍니다.</p><span class="ex">예 · 「피트모스 통백 1개 = 130L 화분 몇 개나 채울까?」</span></div>
+        <div class="pr"><span class="num">03</span><h3>고객군을 나눠 운영</h3><p>원예와 축산은 고민이 다르기 때문에 채널을 따로 운영합니다.</p><span class="ex">예 · 에코피트 채널(블루베리·원예) / 동물복지연구소(축사·동물원)</span></div>
+        <div class="pr"><span class="num">04</span><h3>채널마다 역할 분담</h3><p>쇼츠로 넓게 알리고, 롱폼으로 신뢰를 쌓고, 릴스로 반응을 끌어냅니다.</p><span class="ex">쇼츠 = 도달 · 롱폼 = 신뢰·구독 · 릴스 = 반응</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">회사 개요</span><h2>골든베일 주식회사</h2></div>
+      <div style="overflow-x:auto">
+      <table class="info">
+        <tr><th scope="row">회사명</th><td>골든베일 주식회사 (Golden Veil Co., Ltd.)</td></tr>
+        <tr><th scope="row">대표</th><td>이태인</td></tr>
+        <tr><th scope="row">설립</th><td>2016년 7월</td></tr>
+        <tr><th scope="row">사업 분야</th><td>피트모스 유통·판매, 마케팅 대행</td></tr>
+        <tr><th scope="row">소재지</th><td>경기도 군포시 산본로323번길 4-7, 5층 2호 (산본동, 청우빌딩)</td></tr>
+        <tr><th scope="row">연락처</th><td>031-391-8245 · kj877@naver.com</td></tr>
+      </table>
+      </div>
+    </div>
+  </div>
+
+  <div class="section tight" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">오시는 길</span></div>
+      <div class="map-box">
+        <div>
+          <p class="addr" id="addrText">경기도 군포시 산본로323번길 4-7, 5층 2호</p>
+          <p class="sub">산본동, 청우빌딩</p>
+        </div>
+        <div class="map-actions">
+          <button class="copy" type="button" data-copy="경기도 군포시 산본로323번길 4-7">주소 복사</button>
+          <a class="btn btn-line" style="min-height:44px;font-size:15px" href="https://map.naver.com/p/search/%EA%B2%BD%EA%B8%B0%EB%8F%84%20%EA%B5%B0%ED%8F%AC%EC%8B%9C%20%EC%82%B0%EB%B3%B8%EB%A1%9C323%EB%B2%88%EA%B8%B8%204-7" target="_blank" rel="noopener">네이버 지도에서 보기 ↗</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ SERVICES ============ -->
+<section class="page" data-page="services" data-title="사업영역 | 골든베일">
+  <div class="page-head"><div class="wrap">
+    <span class="eyebrow">사업영역</span>
+    <h1>기획부터 직접영업까지</h1>
+    <p class="lead">콘텐츠를 만드는 회사와 파는 회사를 따로 찾을 필요가 없습니다. 각 단계를 눌러 자세한 내용을 확인하세요.</p>
+  </div></div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="svc">
+        <details><summary><span class="num">01</span><span class="t">기획</span><span class="s">고객이 겪는 문제에서 콘텐츠 주제를 정합니다</span><span class="tog" aria-hidden="true">+</span></summary>
+          <div class="detail">농가와 현장에서 나오는 질문과 고민을 먼저 모읍니다. 해면작업 인건비, 포장 단위, 악취, 깔짚 교체 주기처럼 실제 구매를 망설이게 하는 문제를 콘텐츠 주제로 정하고, 영상의 형식과 순서를 설계합니다.</div></details>
+        <details><summary><span class="num">02</span><span class="t">촬영</span><span class="s">농가 인터뷰와 실측 장면을 직접 촬영합니다</span><span class="tog" aria-hidden="true">+</span></summary>
+          <div class="detail">블루베리 농가, 한우·젖소 농가, 동물원, 승마클럽 현장을 직접 찾아갑니다. 농장주 인터뷰, 식재 과정, 피트모스를 직접 담아 세어 보는 실측 장면을 촬영해 콘텐츠의 근거를 만듭니다.</div></details>
+        <details><summary><span class="num">03</span><span class="t">편집</span><span class="s">롱폼·쇼츠·릴스를 채널에 맞게 제작합니다</span><span class="tog" aria-hidden="true">+</span></summary>
+          <div class="detail">같은 촬영본도 채널마다 길이와 형식을 다르게 만듭니다. 유튜브 롱폼, 유튜브 쇼츠, 인스타그램 릴스를 제작하고, 고령 시청자도 읽기 쉬운 자막 디자인과 썸네일을 함께 만듭니다.</div></details>
+        <details><summary><span class="num">04</span><span class="t">채널 운영</span><span class="s">고객군별 채널을 유튜브·인스타그램으로 운영합니다</span><span class="tog" aria-hidden="true">+</span></summary>
+          <div class="detail">원예와 축산처럼 고민이 다른 고객군은 채널을 나눠 운영합니다. 업로드 일정, 제목과 썸네일, 댓글과 문의 응대까지 관리하고, 어떤 주제와 형식에 반응이 있었는지 확인해 다음 콘텐츠에 반영합니다.</div></details>
+        <details class="key" open><summary><span class="num">05</span><span class="t">직접영업</span><span class="s">들어온 관심을 주문으로 연결합니다</span><span class="tog" aria-hidden="true">+</span></summary>
+          <div class="detail">콘텐츠를 보고 생긴 관심이 그대로 사라지지 않도록, 골든베일이 직접 문의를 받고 주문까지 연결합니다. 영업 현장에서 들은 고객 질문은 다시 다음 콘텐츠의 주제가 됩니다.</div></details>
+      </div>
+    </div>
+  </div>
+
+  <div class="section" style="background:var(--paper);border-block:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">목적별 콘텐츠</span>
+        <h2>목적에 맞는 <span class="hl">5가지 콘텐츠</span>를 만듭니다</h2>
+        <p class="lead">유형마다 맡는 역할이 다릅니다. 기획·촬영·편집 전 과정을 골든베일이 직접 합니다.</p>
+      </div>
+      <div class="types">
+        <div class="type"><span class="role">역할 · 신뢰</span><h3>농가 인터뷰</h3><p>실제 농장주가 직접 말하는 사용 경험으로 구매 전 불안을 줄입니다.</p></div>
+        <div class="type"><span class="role">역할 · 브랜드</span><h3>브랜드 필름·행사</h3><p>공급 현장과 브랜드 이야기로 회사의 신뢰도를 보여줍니다.</p></div>
+        <div class="type"><span class="role">역할 · 근거</span><h3>실증</h3><p>직접 담아 보고 세어 본 결과로 "정말 그런가?"에 답합니다.</p></div>
+        <div class="type"><span class="role">역할 · 도달</span><h3>숏폼</h3><p>짧은 현장 영상으로 처음 보는 농가에게 넓게 알립니다.</p></div>
+        <div class="type"><span class="role">역할 · 신규 시장</span><h3>인플루언서 협업</h3><p>인플루언서와 함께 축사·동물원 같은 새 고객군에 닿습니다.</p></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="wrap">
+      <div class="sec-head">
+        <span class="eyebrow">일하는 방식</span>
+        <h2>다른 브랜드에도 적용되는 <span class="hl">골든베일 그로스 시스템</span></h2>
+        <p class="lead">고객사 에코피트의 채널을 맡아 검증한 8단계를 반복하는 순환 구조입니다. 각 단계 아래는 에코피트 프로젝트에서 실제로 한 일입니다.</p>
+      </div>
+      <div class="cycle">
+        <div class="cyc"><span class="num">01</span><h3>고객 문제 발굴</h3><p>고객이 실제로 겪는 문제와 질문을 모읍니다.</p><span class="ex">해면작업 인건비·악취·깔짚 교체 등 농가 고민 정리</span></div>
+        <div class="cyc"><span class="num">02</span><h3>기획</h3><p>문제 해결형 주제와 형식을 정합니다.</p><span class="ex">문제 해결형 주제를 4가지 원칙으로 설계</span></div>
+        <div class="cyc"><span class="num">03</span><h3>현장 취재·실증</h3><p>실제 농가와 현장에서 근거를 만듭니다.</p><span class="ex">블루베리·한우·젖소 농가 인터뷰, 톤백 130L 실측</span></div>
+        <div class="cyc"><span class="num">04</span><h3>제작</h3><p>채널에 맞는 길이와 형식으로 만듭니다.</p><span class="ex">롱폼·쇼츠·릴스 직접 제작</span></div>
+        <div class="cyc"><span class="num">05</span><h3>멀티채널 확산</h3><p>고객군과 매체에 맞춰 퍼뜨립니다.</p><span class="ex">고객군별 2개 채널 × 유튜브·인스타그램</span></div>
+        <div class="cyc"><span class="num">06</span><h3>성과 분석</h3><p>무엇이 반응했는지 숫자로 확인합니다.</p><span class="ex">월별·주제별·형식별 조회·구독·클릭률 분석</span></div>
+        <div class="cyc"><span class="num">07</span><h3>고성과 주제 재생산</h3><p>반응한 주제를 더 깊게, 더 자주 만듭니다.</p><span class="ex">반응이 좋은 농가 한 곳을 쇼츠 시리즈로 확장</span></div>
+        <div class="cyc key"><span class="num">08</span><h3>영업 연결</h3><p>들어온 관심을 주문으로 연결합니다.</p><span class="ex">고객사 본사 전화 주문과 골든베일 직접영업으로 연결</span></div>
+      </div>
+      <div class="loop"><b>08 → 01</b><span>영업 현장에서 들은 고객 질문과 성과 데이터가 다음 콘텐츠의 주제가 됩니다. 이 순환은 브랜드가 바뀌어도 같습니다.</span></div>
+    </div>
+  </div>
+
+  <div class="section" style="padding-top:0">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">제작 범위</span><h2>맡길 수 있는 일</h2></div>
+      <div class="scope">
+        <div><b>유튜브 롱폼</b><span>농가 인터뷰, 실증, 브랜드 필름</span></div>
+        <div><b>쇼츠·릴스</b><span>현장 숏폼, 시리즈 제작</span></div>
+        <div><b>썸네일·자막 디자인</b><span>고령 시청자도 읽기 쉬운 디자인</span></div>
+        <div><b>채널 운영</b><span>유튜브·인스타그램 업로드와 관리</span></div>
+        <div><b>인플루언서 협업</b><span>새 고객군을 위한 공동 콘텐츠</span></div>
+        <div><b>직접영업</b><span>문의 응대와 주문 연결</span></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="band"><div class="wrap">
+    <div><h2>우리 제품에 맞는 방식이 궁금하다면</h2><p>제품과 고객층을 알려주시면 맞는 콘텐츠와 채널 구성을 제안합니다.</p></div>
+    <div class="act"><span class="tel">031-391-8245</span><a class="btn btn-gold" href="#contact">상담 문의</a></div>
+  </div></div>
+</section>
+
+<!-- ============ PORTFOLIO ============ -->
+<section class="page" data-page="portfolio" data-title="포트폴리오 | 골든베일">
+  <div class="page-head"><div class="wrap">
+    <span class="eyebrow">포트폴리오</span>
+    <h1>고객의 문제를 콘텐츠로 풀고,<br>피트모스 판매로 연결했습니다</h1>
+    <p class="lead">무엇을, 누구에게 팔았는지와 어떤 문제를 어떤 콘텐츠로 풀었는지 사례별로 정리했습니다. 썸네일을 누르면 실제 영상을 볼 수 있습니다.</p>
+  </div></div>
+
+  <div class="section" style="padding-bottom:clamp(32px,4vw,48px)">
+    <div class="wrap">
+      <article class="case2">
+        <header class="c2-head">
+          <span class="tag">사례 01</span>
+          <h3>고객사 에코피트의 화이트 피트모스를 <span class="hl">블루베리 농가</span>에 판매로 연결했습니다</h3>
+          <dl class="c2-meta">
+            <div><dt>고객사 · 제품</dt><dd>에코피트 · 화이트 피트모스 (블루베리·원예용 배지)</dd></div>
+            <div><dt>누구에게</dt><dd>블루베리·원예 농가의 중장년 농장주</dd></div>
+            <div><dt>어디서</dt><dd>에코피트 유튜브 · 인스타그램 채널 (골든베일 운영)</dd></div>
+          </dl>
+        </header>
+        <div class="pr-list">
+          <div class="pr-row">
+            <div class="pr-p"><span class="pr-k">농가의 문제</span><p>해면작업에 드는 인건비와 시간이 부담됩니다.</p></div>
+            <span class="pr-ar" aria-hidden="true">→</span>
+            <div class="pr-s"><span class="pr-k">골든베일의 해결</span><p>해면 작업이 필요 없는 피트모스를 실제 농가 현장에서 보여줬습니다.</p></div>
+            <a class="pr-v" href="https://www.youtube.com/watch?v=1X7mCPsxYtE" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_1X7mCPsxYtE.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="cap">블루베리 재배, 아직도 해면하고 계신가요? ↗</span></a>
+          </div>
+          <div class="pr-row">
+            <div class="pr-p"><span class="pr-k">농가의 문제</span><p>포장 하나로 화분을 얼마나 채울 수 있는지 감이 오지 않습니다.</p></div>
+            <span class="pr-ar" aria-hidden="true">→</span>
+            <div class="pr-s"><span class="pr-k">골든베일의 해결</span><p>톤백 하나를 130L 화분에 직접 담아 세어 보는 실측 영상을 만들었습니다.</p></div>
+            <a class="pr-v" href="https://www.youtube.com/watch?v=ia7QPiSa8Zo" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_ia7QPiSa8Zo.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="cap">피트모스 통백 1개 = 130L 화분 몇 개나 채울까? ↗</span></a>
+          </div>
+          <div class="pr-row">
+            <div class="pr-p"><span class="pr-k">농가의 문제</span><p>원산지가 다른 피트모스로 바꿔도 될지 불안합니다.</p></div>
+            <span class="pr-ar" aria-hidden="true">→</span>
+            <div class="pr-s"><span class="pr-k">골든베일의 해결</span><p>실제로 바꿔 쓴 블루베리 농장주가 직접 경험을 말하는 인터뷰를 만들었습니다.</p></div>
+            <a class="pr-v" href="https://www.youtube.com/watch?v=rRuLLw9rix8" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_rRuLLw9rix8.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="cap">블루베리 농장주가 화이트 피트모스를 바꾼 결정적 이유는? ↗</span></a>
+          </div>
+        </div>
+        <p class="c2-result"><b>판매 연결</b>콘텐츠를 보고 생긴 문의는 고객사 본사 전화 주문과 골든베일 직접영업으로 피트모스 주문까지 이어졌습니다.</p>
+      </article>
+      <article class="case2">
+        <header class="c2-head">
+          <span class="tag brown">사례 02</span>
+          <h3>같은 피트모스를 <span class="hl">축사·동물원·승마클럽</span>이라는 새 시장에 알렸습니다</h3>
+          <dl class="c2-meta">
+            <div><dt>고객사 · 제품</dt><dd>에코피트 · 화이트 피트모스 (축사·동물 깔짚용)</dd></div>
+            <div><dt>누구에게</dt><dd>동물원, 축사, 승마클럽 운영자</dd></div>
+            <div><dt>어디서</dt><dd>동물복지연구소 유튜브 · 인스타그램 채널 (골든베일 자체 채널)</dd></div>
+          </dl>
+        </header>
+        <div class="pr-list">
+          <div class="pr-row">
+            <div class="pr-p"><span class="pr-k">현장의 문제</span><p>매일 청소해도 동물원 악취가 잡히지 않습니다.</p></div>
+            <span class="pr-ar" aria-hidden="true">→</span>
+            <div class="pr-s"><span class="pr-k">골든베일의 해결</span><p>원주 자연생태원에 피트모스를 깔고, 원장님이 직접 써 본 변화를 영상으로 담았습니다.</p></div>
+            <a class="pr-v" href="https://www.youtube.com/watch?v=UYoO1TcH4rY" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_UYoO1TcH4rY.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="cap">동물원 악취! 계속 청소만 하실 건가요? ↗</span></a>
+          </div>
+          <div class="pr-row">
+            <div class="pr-p"><span class="pr-k">현장의 문제</span><p>말 마방에 피트모스를 깔아도 괜찮을지 확신이 없습니다.</p></div>
+            <span class="pr-ar" aria-hidden="true">→</span>
+            <div class="pr-s"><span class="pr-k">골든베일의 해결</span><p>말 인플루언서 월리와 함께 실제로 깔아 보고, 보호자의 사용 후기를 쇼츠로 만들었습니다.</p></div>
+            <a class="pr-v" href="https://www.youtube.com/shorts/xA1ix8FwBJ0" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_xA1ix8FwBJ0.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="cap">“피트모스, 말 발굽 관리에 너무 좋아요!” 월리누나의 실제 후기 ↗</span></a>
+          </div>
+          <div class="pr-row">
+            <div class="pr-p"><span class="pr-k">현장의 문제</span><p>처음 보는 채널과 제품에는 관심이 가지 않습니다.</p></div>
+            <span class="pr-ar" aria-hidden="true">→</span>
+            <div class="pr-s"><span class="pr-k">골든베일의 해결</span><p>팔로워가 많은 월리의 일상 콘텐츠에 피트모스를 자연스럽게 녹여 새 시청자에게 닿았습니다.</p></div>
+            <a class="pr-v" href="https://www.youtube.com/shorts/u1UI2AAq8II" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_u1UI2AAq8II.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="cap">말은 무슨 맛 사탕을 먹을까? ↗</span></a>
+          </div>
+        </div>
+        <p class="c2-result"><b>시장 확장</b>원예용으로 팔던 피트모스를 축사·동물원·승마클럽이라는 새 고객군에 알렸습니다.</p>
+      </article>
+    </div>
+  </div>
+
+  <div class="section" style="background:var(--paper);border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="sec-head"><span class="eyebrow">대표 영상</span><h2>직접 만든 영상</h2></div>
+      <div class="filters" role="group" aria-label="영상 분류">
+        <button type="button" data-f="all" aria-pressed="true">전체</button>
+        <button type="button" data-f="berry" aria-pressed="false">블루베리 농가</button>
+        <button type="button" data-f="animal" aria-pressed="false">축사·동물원</button>
+        <button type="button" data-f="shorts" aria-pressed="false">쇼츠</button>
+      </div>
+      <div class="vgrid" id="vids">
+        <a class="vcard" data-cat="berry" href="https://www.youtube.com/watch?v=rRuLLw9rix8" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_rRuLLw9rix8.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="vb"><span class="tag">농가 인터뷰</span><h3>블루베리 농장주가 화이트 피트모스를 바꾼 결정적 이유는?</h3><span class="yt">에코피트 · 유튜브에서 보기 ↗</span></span></a>
+        <a class="vcard" data-cat="berry" href="https://www.youtube.com/watch?v=ia7QPiSa8Zo" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_ia7QPiSa8Zo.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="vb"><span class="tag">실증</span><h3>피트모스 통백 1개 = 130L 화분 몇 개나 채울까?</h3><span class="yt">에코피트 · 유튜브에서 보기 ↗</span></span></a>
+        <a class="vcard" data-cat="berry" href="https://www.youtube.com/watch?v=1X7mCPsxYtE" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_1X7mCPsxYtE.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="vb"><span class="tag">고객 문제</span><h3>블루베리 재배, 아직도 해면하고 계신가요?</h3><span class="yt">에코피트 · 유튜브에서 보기 ↗</span></span></a>
+        <a class="vcard" data-cat="animal" href="https://www.youtube.com/watch?v=09FubO1p2WU" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_09FubO1p2WU.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="vb"><span class="tag brown">축사·동물원</span><h3>동물원은 악취를 어떻게 잡을까?</h3><span class="yt">동물복지연구소 · 유튜브에서 보기 ↗</span></span></a>
+        <a class="vcard" data-cat="shorts berry" href="https://www.youtube.com/shorts/201QAW7GMTA" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_201QAW7GMTA.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="vb"><span class="tag">쇼츠</span><h3>600평 블루베리 농가가 인건비를 줄인 방법</h3><span class="yt">에코피트 · 유튜브에서 보기 ↗</span></span></a>
+        <a class="vcard" data-cat="animal" href="https://www.youtube.com/watch?v=UYoO1TcH4rY" target="_blank" rel="noopener"><span class="th"><img src="assets/yt_UYoO1TcH4rY.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="vb"><span class="tag brown">축사·동물원</span><h3>동물원 악취! 계속 청소만 하실 건가요?</h3><span class="yt">동물복지연구소 · 유튜브에서 보기 ↗</span></span></a>
+      </div>
+      <div class="wally" id="wally">
+        <div class="wally-head">
+          <div><span class="tag brown">인플루언서 협업</span><h3>동물복지연구소 × 말 인플루언서 월리</h3><p>승마클럽 현장에서 말 인플루언서 월리와 함께 만든 쇼츠입니다. 축사·동물원이라는 새 고객군에 다가간 협업 콘텐츠입니다.</p></div>
+        </div>
+        <div class="sgrid">
+        <a class="scard" data-cat="animal shorts" href="https://www.youtube.com/shorts/xA1ix8FwBJ0" target="_blank" rel="noopener"><span class="th"><img src="assets/ytv_xA1ix8FwBJ0.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="sb"><h3>“피트모스, 말 발굽 관리에 너무 좋아요!” 월리누나의 실제 후기</h3><span class="yt">유튜브 쇼츠 ↗</span></span></a>
+        <a class="scard" data-cat="animal shorts" href="https://www.youtube.com/shorts/QGOe7Jae4SU" target="_blank" rel="noopener"><span class="th"><img src="assets/ytv_QGOe7Jae4SU.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="sb"><h3>작은말 월리가 피트모스를 또 찾은 이유!?</h3><span class="yt">유튜브 쇼츠 ↗</span></span></a>
+        <a class="scard" data-cat="animal shorts" href="https://www.youtube.com/shorts/u1UI2AAq8II" target="_blank" rel="noopener"><span class="th"><img src="assets/ytv_u1UI2AAq8II.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="sb"><h3>말은 무슨 맛 사탕을 먹을까?</h3><span class="yt">유튜브 쇼츠 ↗</span></span></a>
+        <a class="scard" data-cat="animal shorts" href="https://www.youtube.com/shorts/4nfAbhBsz2k" target="_blank" rel="noopener"><span class="th"><img src="assets/ytv_4nfAbhBsz2k.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="sb"><h3>큰 말보다 작은 말이 더 키우기 쉬울까?</h3><span class="yt">유튜브 쇼츠 ↗</span></span></a>
+        <a class="scard" data-cat="animal shorts" href="https://www.youtube.com/shorts/fSSsRJBCCSg" target="_blank" rel="noopener"><span class="th"><img src="assets/ytv_fSSsRJBCCSg.jpg" alt="" loading="lazy"><span class="play" aria-hidden="true"></span></span><span class="sb"><h3>말은 왜 서서 잘까? 우리가 몰랐던 말의 수면법!</h3><span class="yt">유튜브 쇼츠 ↗</span></span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="band"><div class="wrap">
+    <div><h2>우리 제품도 이렇게 만들 수 있을까요?</h2><p>제품과 고객층을 알려주시면 맞는 콘텐츠 방향을 제안합니다.</p></div>
+    <div class="act"><span class="tel">031-391-8245</span><a class="btn btn-gold" href="#contact">상담 문의</a></div>
+  </div></div>
+</section>
+
+<!-- ============ CONTACT ============ -->
+<section class="page" data-page="contact" data-title="문의 | 골든베일">
+  <div class="page-head"><div class="wrap">
+    <span class="eyebrow">문의</span>
+    <h1>농자재 마케팅, 상담부터 시작하세요</h1>
+    <p class="lead">제품과 지금의 고민을 남겨 주시면 확인 후 연락드립니다. 전화와 이메일로도 문의할 수 있습니다.</p>
+  </div></div>
+
+  <div class="section">
+    <div class="wrap contact">
+      <div>
+        <h2 style="font-size:var(--fs-h3);font-weight:800">상담은 이렇게 진행됩니다</h2>
+        <ol class="flow">
+          <li><span class="n">1</span><div><b>문의 접수</b><span>제품과 지금의 고민을 알려주세요.</span></div></li>
+          <li><span class="n">2</span><div><b>현황 진단 미팅</b><span>제품, 고객층, 지금 운영 중인 채널을 함께 살펴봅니다.</span></div></li>
+          <li><span class="n">3</span><div><b>맞춤 제안서</b><span>콘텐츠 방향과 채널 운영 계획을 제안합니다.</span></div></li>
+        </ol>
+        <div class="cinfo">
+          <div class="crow"><span class="k">전화</span><span class="v">031-391-8245</span><button class="copy" type="button" data-copy="031-391-8245">번호 복사</button></div>
+          <div class="crow"><span class="k">이메일</span><span class="v">kj877@naver.com</span><button class="copy" type="button" data-copy="kj877@naver.com">주소 복사</button></div>
+          <div class="crow"><span class="k">주소</span><span class="v" style="font-size:16px;font-weight:600">경기도 군포시 산본로323번길 4-7, 5층 2호</span><span></span></div>
+        </div>
+      </div>
+
+      <form class="inq" id="inqForm" novalidate>
+        <div class="row2">
+          <div class="fld"><label for="f-company">회사명<span class="req">*</span></label><input id="f-company" name="company" required autocomplete="organization" placeholder="예) 그린농자재"></div>
+          <div class="fld"><label for="f-name">담당자명<span class="req">*</span></label><input id="f-name" name="name" required autocomplete="name" placeholder="예) 홍길동 팀장"></div>
+        </div>
+        <div class="row2">
+          <div class="fld"><label for="f-phone">연락처<span class="req">*</span></label><input id="f-phone" name="phone" type="tel" required autocomplete="tel" placeholder="010-0000-0000"></div>
+          <div class="fld"><label for="f-email">이메일</label><input id="f-email" name="email" type="email" autocomplete="email" placeholder="name@company.com"></div>
+        </div>
+        <div class="fld"><label for="f-item">품목</label>
+          <select id="f-item" name="item">
+            <option value="">선택해 주세요</option>
+            <option>피트모스·상토</option>
+            <option>비료·영양제</option>
+            <option>농기자재</option>
+            <option>축산 자재</option>
+            <option>기타</option>
+          </select>
+        </div>
+        <div class="fld"><label for="f-msg">문의 내용<span class="req">*</span></label><textarea id="f-msg" name="message" required placeholder="제품, 주요 고객층, 지금 고민하고 계신 점을 적어 주세요."></textarea></div>
+        <label class="agree" for="f-agree"><input id="f-agree" type="checkbox" required><span>상담을 위한 개인정보 수집·이용에 동의합니다. <a href="#privacy">개인정보처리방침 보기</a></span></label>
+        <div class="notice" id="formMsg" hidden></div>
+        <button class="btn btn-green" type="submit" style="justify-self:start">문의 보내기</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRIVACY ============ -->
+<section class="page" data-page="privacy" data-title="개인정보처리방침 | 골든베일">
+  <div class="page-head"><div class="wrap">
+    <span class="eyebrow">개인정보처리방침</span>
+    <h1>개인정보처리방침</h1>
+    <span class="draft">초안 · 게시 전 대괄호 [ ] 항목 확인 필요</span>
+  </div></div>
+  <div class="section"><div class="wrap doc">
+    <p>골든베일 주식회사(이하 "회사")는 홈페이지 문의를 통해 받은 개인정보를 아래와 같이 처리합니다.</p>
+    <h2>1. 수집하는 항목</h2>
+    <ul><li>필수: 회사명, 담당자명, 연락처, 문의 내용</li><li>선택: 이메일, 품목</li></ul>
+    <h2>2. 수집·이용 목적</h2>
+    <p>상담 문의 확인, 답변 및 상담 진행</p>
+    <h2>3. 보유 및 이용 기간</h2>
+    <p>상담 완료 후 [ 1년 ] 동안 보관한 뒤 지체 없이 파기합니다. 관계 법령에 따라 보관이 필요한 경우 해당 기간 동안 보관합니다.</p>
+    <h2>4. 제3자 제공</h2>
+    <p>회사는 이용자의 동의 없이 개인정보를 제3자에게 제공하지 않습니다.</p>
+    <h2>5. 동의를 거부할 권리</h2>
+    <p>이용자는 개인정보 수집·이용에 동의하지 않을 수 있습니다. 다만 필수 항목에 동의하지 않으면 홈페이지 문의 접수가 어렵습니다. 이 경우 전화(031-391-8245)로 문의할 수 있습니다.</p>
+    <h2>6. 이용자의 권리</h2>
+    <p>이용자는 언제든지 자신의 개인정보 열람, 정정, 삭제, 처리 정지를 요청할 수 있습니다.</p>
+    <h2>7. 개인정보 보호책임자</h2>
+    <ul><li>성명: [ 담당자 성명 ]</li><li>연락처: 031-391-8245 · kj877@naver.com</li></ul>
+    <h2>8. 시행일</h2>
+    <p>이 방침은 [ 2026년 __월 __일 ]부터 적용합니다.</p>
+  </div></div>
+</section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap">
+    <div class="ft">
+      <img src="assets/logo-light.png" alt="골든베일 GOLDENVEIL" width="556" height="243">
+      <p class="big">농업인에게 닿는 콘텐츠,<br><span class="gold">판매로 증명합니다.</span></p>
+      <nav aria-label="하단 메뉴">
+        <a href="#about">회사소개</a><a href="#services">사업영역</a><a href="#portfolio">포트폴리오</a><a href="#contact">문의</a><a href="#privacy">개인정보처리방침</a>
+      </nav>
+    </div>
+    <div class="biz">
+      <span><b>골든베일 주식회사</b></span><span>대표 이태인</span><span>사업자등록번호 584-86-00443</span>
+      <span>경기도 군포시 산본로323번길 4-7, 5층 2호 (산본동, 청우빌딩)</span><span>전화 031-391-8245</span><span>이메일 kj877@naver.com</span>
+    </div>
+    <p class="copyr">© 2026 Golden Veil Co., Ltd. All rights reserved.</p>
+  </div>
+</footer>
+
+<div class="callbar">
+  <a class="btn btn-green" href="tel:0313918245">전화 상담</a>
+  <a class="btn btn-gold" href="#contact">문의하기</a>
+</div>
+
+<script>
+(function(){
+  var pages=[].slice.call(document.querySelectorAll('.page'));
+  var ids=pages.map(function(p){return p.dataset.page});
+  var navLinks=[].slice.call(document.querySelectorAll('.nav a,.mnav a'));
+  var mnav=document.getElementById('mnav'), menuBtn=document.getElementById('menuBtn');
+  function show(id){
+    if(ids.indexOf(id)<0) id='home';
+    pages.forEach(function(p){p.classList.toggle('active',p.dataset.page===id)});
+    navLinks.forEach(function(a){ if(a.getAttribute('href')==='#'+id) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current'); });
+    var pg=pages[ids.indexOf(id)]; if(pg&&pg.dataset.title) document.title=pg.dataset.title;
+    mnav.classList.remove('open'); menuBtn.setAttribute('aria-expanded','false');
+    window.scrollTo(0,0);
+    var v=document.getElementById('heroVideo');
+    if(v){ if(id==='home' && !paused){ try{var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){});}catch(e){} } else { try{v.pause()}catch(e){} } }
+  }
+  function cur(){ return (location.hash||'#home').slice(1) }
+  window.addEventListener('hashchange',function(){show(cur())});
+  menuBtn.addEventListener('click',function(){ var o=mnav.classList.toggle('open'); menuBtn.setAttribute('aria-expanded',o?'true':'false'); });
+
+  // hero video: lighter file on small screens; respect reduced motion
+  var v=document.getElementById('heroVideo'), pauseBtn=document.getElementById('pauseBtn');
+  var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  var paused=reduce;
+  v.src=(window.innerWidth<820)?'assets/hero_720.mp4':'assets/hero_1080.mp4';
+  if(reduce){ v.removeAttribute('autoplay'); pauseBtn.textContent='▶'; pauseBtn.setAttribute('aria-label','배경 영상 재생'); }
+  pauseBtn.addEventListener('click',function(){
+    paused=!paused;
+    if(paused){ v.pause(); pauseBtn.textContent='▶'; pauseBtn.setAttribute('aria-label','배경 영상 재생'); }
+    else { var pr=v.play(); if(pr&&pr.catch) pr.catch(function(){}); pauseBtn.textContent='❚❚'; pauseBtn.setAttribute('aria-label','배경 영상 일시정지'); }
+  });
+
+  // header border on scroll
+  var hdr=document.querySelector('.site-header');
+  window.addEventListener('scroll',function(){hdr.classList.toggle('scrolled',window.scrollY>8)},{passive:true});
+
+  // portfolio filters
+  var fbtns=[].slice.call(document.querySelectorAll('.filters button'));
+  var cards=[].slice.call(document.querySelectorAll('#vids .vcard, #wally .scard')); var wally=document.getElementById('wally');
+  fbtns.forEach(function(b){ b.addEventListener('click',function(){
+    var f=b.dataset.f;
+    fbtns.forEach(function(x){x.setAttribute('aria-pressed',x===b?'true':'false')});
+    cards.forEach(function(c){ c.hidden = !(f==='all' || (' '+c.dataset.cat+' ').indexOf(' '+f+' ')>=0); }); wally.hidden = !wally.querySelector('.scard:not([hidden])');
+  })});
+
+  // copy buttons
+  [].slice.call(document.querySelectorAll('[data-copy]')).forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var t=btn.dataset.copy, old=btn.textContent;
+      function done(){ btn.textContent='복사됨'; setTimeout(function(){btn.textContent=old},1600); }
+      try{ navigator.clipboard.writeText(t).then(done,function(){ sel(btn) }); }catch(e){ sel(btn) }
+    });
+  });
+  function sel(btn){ var v=btn.parentElement.querySelector('.v,.addr'); if(!v) return; var r=document.createRange(); r.selectNodeContents(v); var s=getSelection(); s.removeAllRanges(); s.addRange(r); }
+
+  // form (draft: not connected to a server yet)
+  var form=document.getElementById('inqForm'), msg=document.getElementById('formMsg');
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var missing=[].slice.call(form.querySelectorAll('[required]')).filter(function(el){ return el.type==='checkbox'?!el.checked:!el.value.trim(); });
+    msg.hidden=false;
+    if(missing.length){
+      msg.className='notice err';
+      msg.textContent='필수 항목을 확인해 주세요: '+missing.map(function(el){ return el.type==='checkbox'?'개인정보 수집·이용 동의':form.querySelector('label[for="'+el.id+'"]').firstChild.textContent.trim(); }).join(', ');
+      missing[0].focus(); return;
+    }
+    msg.className='notice';
+    msg.textContent='입력 내용을 확인했습니다. 지금은 초안이라 접수 기능이 아직 연결되지 않았습니다. 빠른 상담은 전화 031-391-8245로 연락해 주세요.';
+  });
+
+  show(cur());
+})();
+</script>
+</body>
+</html>
